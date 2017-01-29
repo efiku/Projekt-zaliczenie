@@ -13,7 +13,7 @@
 #include "Application.h"
 #include "ExceptionResolver.h"
 #include "Definitions.h"
-
+#include <fstream>
 
 using namespace std;
 void makeTests();
@@ -27,7 +27,9 @@ int main()
     MyVector<node> container(20);
     node  inputObject;
     node *findObject = NULL;
-
+    fstream fin,fout;
+    fout.close();
+    fin.close();
     while (app.run()) {
         int option;
         system("cls");
@@ -121,6 +123,24 @@ int main()
         case 8:
             app.toggle();
             break;
+     
+
+
+        case 9:
+            cout << "Zapisuje dane \n";
+
+            fout.open("plik.txt", ios::out | ios::trunc);
+            fout << container;
+            fout.close();
+            break;
+
+
+        case 10:
+            cout << "Wczytuje dane \n";
+            fin.open("plik.txt", ios::in);
+            fin >> container;
+            fin.close();
+            break;
         }
 
     }
@@ -128,6 +148,7 @@ int main()
 
 
 
+    fout.close();
 
     // This code is a total mess, I don't have time to enhance this... 
     // Because of work... 

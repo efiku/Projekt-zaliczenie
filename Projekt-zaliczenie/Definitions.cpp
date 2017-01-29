@@ -22,7 +22,9 @@ Definitions::Definitions(ExceptionResolver e)
         "5. Wstaw obiekt w okreúlone miejsce\n"
         "6. znajdü wszystkie obiekty z podanym kluczem\n"
         "7. wyswietl dane na monitorze\n"
-        "8. Zakoncz program\n\n"
+        "8. Zakoncz program\n"
+        "9. Zapisz\n"
+        "10. Wczytaj\n\n"
         "Podaj opcje: "));
 
     translations["node_description"] = std::string(

@@ -35,6 +35,6 @@ std::istream& operator >> (std::istream &input, node &o)
 
 std::ostream & operator<<(std::ostream & out, node & o)
 {
-    out << o.numb << " " << o.str << " " << o.getX() << " " << o.getY() << std::endl;
+    out << o.numb << " " << o.str << " " << o.getX() << " " << o.getY() ;
     return out;
 }

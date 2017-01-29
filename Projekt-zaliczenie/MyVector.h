@@ -28,9 +28,19 @@ public:
     Type & operator[] (const unsigned int);
     friend std::ostream& operator<<(std::ostream& out, MyVector<Type> & o) {
         for (unsigned int index = 0; index < o.size(); index++) {
-            Type * object = &o[index];
-            out << *object << std::endl;
+             out << o[index] << "\n";
         }
+        return out;
+    }
+    friend std::ostream& operator>>(std::fstream& out, MyVector<Type> & o) {
+        o.clearAll();
+        Type p; 
+        while (!out.eof())
+        {
+            out >> p;
+            o.push(p);
+        }
+        o.pop();
         return out;
     }
 };
