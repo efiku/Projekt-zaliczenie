@@ -28,7 +28,7 @@ public:
     Type & operator[] (const unsigned int);
     friend std::ostream& operator<<(std::ostream& out, MyVector<Type> & o) {
         for (unsigned int index = 0; index < o.size(); index++) {
-             out << o[index] << "\n";
+             out << o[index] ;
         }
         return out;
     }
