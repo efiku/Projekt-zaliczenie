@@ -63,7 +63,7 @@ int main()
 
         case 4:
             cout << definitions.getTranslation("modify_object");
-            cout << definitions.getTranslation("vector_clearednode_description");
+            cout << definitions.getTranslation("node_description");
             cin >> inputObject;
             findObject = efik::find(container.begin(), container.end(), inputObject);
             if (findObject) {
